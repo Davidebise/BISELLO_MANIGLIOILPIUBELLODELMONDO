@@ -2,7 +2,6 @@
 #include <stdlib.h>
 int main() {
     int n=6;
-    scanf(" %d",&n);
     int *array=(int*)malloc(n*sizeof(int));
     array[0]=1;
     array[1]=2;
@@ -12,7 +11,8 @@ int main() {
     array[5]=6;
     int c=0;
     for (int i=0;i<n;i++) {
-        array[i]=array[c];
+
+        array[c]=array[i];
         if (array[i]>=0) {
             c++;
         }
