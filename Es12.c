@@ -22,13 +22,15 @@ int main() {
         while (true){
             printf("Premere 2 per uscire o un altro numero per inserire un commento:");
             scanf(" %d",&choose);
+            getchar(); //consuma l'\n
             if (choose==2) {
                 break;
             }
             printf("Autore:");
             scanf("%s",&p.comments[i].name);
+            getchar();
             printf("Testo:");
-            gets(p.comments[i].text);
+            fgets(p.comments[i].text, 200, stdin);
             total_comments+=1;
         }
     }
